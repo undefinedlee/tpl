@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/javascript" src="index.js"></script>
+	<script id="tpl" type="text/tpl">
+		<ul>
+			<$ Model && Model.forEach(function(item){ $>
+				<li><$= item $></li>
+			<$ }); $>
+		</ul>
+	</script>
+	<script type="text/javascript">
+		var template = tpl(document.getElementById("tpl").innerHTML.trim());
+		document.getElementById("container").innerHTML = template([1,2,3]);
+	</script>
+</body>
+</html>

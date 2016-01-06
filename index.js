@@ -6,7 +6,7 @@ function tpl(template) {
 			if (/^\s*$/.test(b))
 				return "";
 			else
-				return "_$_.push('" + b.replace(/\\/g, "\\\\").replace(/\r\t\n/g, " ").replace(/'/g, "\\'") + "');";
+				return "_$_.push('" + b.replace(/\\/g, "\\\\").replace(/[\r\t\n]/g, " ").replace(/'/g, "\\'") + "');";
 		}) + "return _$_.join('');");
 	} catch (e) {
 		console.error(e);
