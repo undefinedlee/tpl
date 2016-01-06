@@ -16,6 +16,7 @@
 	</script>
 	<script type="text/javascript">
 		var template = tpl(document.getElementById("tpl").innerHTML);
+		console.log(template([1,2,3]));
 		document.getElementById("container").innerHTML = template([1,2,3]);
 	</script>
 </body>
